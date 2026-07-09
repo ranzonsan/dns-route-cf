@@ -1,0 +1,8 @@
+name = "dns-route-cf"
+main = "src/index.ts"
+compatibility_date = "2025-04-01"
+
+[vars]
+UPSTREAM_DOH = "https://cloudflare-dns.com/dns-query"
+UPSTREAM_DOH_BACKUP = "https://dns.google/dns-query"
+FALLBACK_TIMEOUT_MS = "3000"

@@ -1,0 +1,16 @@
+{
+  "name": "dns-route-cf",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker DoH DNS Proxy",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260702.1",
+    "wrangler": "^4.107.1"
+  }
+}
