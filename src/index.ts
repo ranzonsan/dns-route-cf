@@ -2,7 +2,6 @@ interface Env {
   UPSTREAM_DOH: string;
   UPSTREAM_DOH_BACKUP: string;
   FALLBACK_TIMEOUT_MS: string;
-  AUTH_TOKEN: string;
 }
 
 const DNS_PATH = '/dns-query';
@@ -72,11 +71,6 @@ export default {
 
     if (method !== 'GET' && method !== 'POST') {
       return new Response('Method Not Allowed', { status: 405 });
-    }
-
-    const token = url.searchParams.get('token');
-    if (env.AUTH_TOKEN !== '' && token !== env.AUTH_TOKEN) {
-      return new Response('Unauthorized', { status: 401 });
     }
 
     let dnsBody: Uint8Array;
